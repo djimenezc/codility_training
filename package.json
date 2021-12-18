@@ -1,0 +1,34 @@
+{
+  "name": "codility_training",
+  "version": "1.0.0",
+  "description": "Codility training examples",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register \"test/**/*.spec.ts\"",
+    "test:single": "mocha --require @babel/register \"test/arrayRotation.specs.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djimenezc/codility_training.git"
+  },
+  "keywords": [
+    "codility",
+    "algorithm"
+  ],
+  "author": "djimenezc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djimenezc/codility_training/issues"
+  },
+  "homepage": "https://github.com/djimenezc/codility_training#readme",
+  "devDependencies": {
+    "chai": "~4.2.0",
+    "mocha": "~6.1.4"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4"
+  }
+}
