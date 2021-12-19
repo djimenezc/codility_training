@@ -4,7 +4,7 @@
   "description": "Codility training examples",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --require @babel/register \"test/**/*.spec.ts\"",
+    "test": "mocha --require @babel/register \"test/**/*.specs.js\"",
     "test:single": "mocha --require @babel/register \"test/arrayRotation.specs.js\""
   },
   "repository": {
