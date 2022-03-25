@@ -1,0 +1,37 @@
+- hosts: all
+  become: yes
+  tasks:
+
+  - name: "install nginx"
+    apt:
+      name: ['nginx']
+      state: latest
+
+  - name: "create folder"
+    file:
+      path: /etc/nginx/sites-enabled/
+      state: directory
+      mode: '0775'
+
+  - name: "copy nginx configuration file"
+    copy:
+      src: /project/application.conf
+      dest: /etc/nginx/sites-enabled/application.conf
+      mode: '0600'
+      force: yes
+
+  - name: "extract project files"
+    unarchive:
+      src: /project/www.tar.gz
+      dest: /var/www/html
+
+  - name: "start nginx service"
+    shell: "service nginx start"
+
+  - name: "test conectivity"
+    shell: "curl http://localhost/"
+    register: outputConnectivity
+
+  - name: "display output"
+    debug:
+        msg: outputConnectivity
