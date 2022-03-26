@@ -1,5 +1,3 @@
-
-
 import {expect} from 'chai';
 import {solution} from "../src/arrayRotation";
 
